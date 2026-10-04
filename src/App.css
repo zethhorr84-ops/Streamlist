@@ -1,0 +1,342 @@
+/* ------------------------------
+   Overall Application
+------------------------------ */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* ------------------------------
+   Navigation
+------------------------------ */
+
+.navbar {
+  background: #111827;
+  padding: 1.25rem 2.5rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: #d1d5db;
+  text-decoration: none;
+
+  padding: 0.7rem 1.2rem;
+
+  border-radius: 8px;
+
+  transition: 0.2s ease;
+}
+
+.nav-link:hover {
+  background: #374151;
+  color: white;
+}
+
+.nav-link.active {
+  background: #e50914;
+  color: white;
+}
+
+/* ------------------------------
+   StreamList Hero
+------------------------------ */
+
+.streamlist-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.eyebrow {
+  color: #e50914;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  margin: 0.75rem 0 1.25rem;
+
+  font-size: 3rem;
+  color: #111827;
+}
+
+.hero-text {
+  max-width: 650px;
+  margin: 0 auto;
+
+  color: #6b7280;
+
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* ------------------------------
+   StreamList Card
+------------------------------ */
+
+.streamlist-card {
+  max-width: 800px;
+  margin: 0 auto;
+
+  background: white;
+
+  padding: 2.5rem;
+
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.streamlist-card h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+
+  color: #111827;
+}
+
+/* ------------------------------
+   Form
+------------------------------ */
+
+.stream-form {
+  display: flex;
+
+  gap: 1.25rem;
+
+  margin-bottom: 2.5rem;
+}
+
+.stream-form input {
+  flex: 1;
+
+  padding: 1rem 1.1rem;
+
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+
+  font-size: 1rem;
+
+  outline: none;
+}
+
+.stream-form input:focus {
+  border-color: #e50914;
+}
+
+.stream-form button {
+  background: #e50914;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 1rem 1.5rem;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.stream-form button:hover {
+  background: #b20710;
+  transform: translateY(-1px);
+}
+
+/* ------------------------------
+   StreamList Items
+------------------------------ */
+
+.list-container {
+  border-top: 1px solid #e5e7eb;
+
+  padding-top: 2rem;
+}
+
+.list-container h2 {
+  margin-bottom: 1.25rem;
+}
+
+.empty-message {
+  color: #6b7280;
+
+  text-align: center;
+
+  padding: 2.5rem 1rem;
+}
+
+.stream-list {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stream-item {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 1.1rem 1.25rem;
+
+  background: #f9fafb;
+
+  border-left: 4px solid #e50914;
+
+  border-radius: 8px;
+
+  font-weight: 500;
+}
+
+/* ------------------------------
+   Placeholder Pages
+------------------------------ */
+
+.placeholder-page {
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding: 7rem 2rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+.placeholder-card {
+  width: 100%;
+  max-width: 600px;
+
+  text-align: center;
+
+  background: white;
+
+  padding: 4.5rem 2.5rem;
+
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.placeholder-icon {
+  font-size: 3.5rem;
+}
+
+.placeholder-card h1 {
+  color: #111827;
+
+  margin: 1.5rem 0 1rem;
+}
+
+.placeholder-card p {
+  color: #6b7280;
+
+  line-height: 1.8;
+}
+
+/* ------------------------------
+   Footer
+------------------------------ */
+
+.footer {
+  text-align: center;
+
+  padding: 2rem;
+
+  background: #111827;
+
+  color: #9ca3af;
+
+  margin-top: auto;
+}
+
+/* ------------------------------
+   Responsive Design
+------------------------------ */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    padding: 1.25rem;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+
+    gap: 1.5rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 0.6rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .streamlist-section {
+    padding: 3rem 1rem;
+  }
+
+  .streamlist-card {
+    padding: 1.5rem;
+  }
+
+  .stream-form {
+    flex-direction: column;
+  }
+
+  .stream-form button {
+    width: 100%;
+  }
+
+}
