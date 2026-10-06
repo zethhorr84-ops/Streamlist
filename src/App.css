@@ -95,7 +95,7 @@
   margin: 0.75rem 0 1.25rem;
 
   font-size: 3rem;
-  color: #111827;
+  color: #374151;
 }
 
 .hero-text {
@@ -129,7 +129,7 @@
   margin-top: 0;
   margin-bottom: 1.5rem;
 
-  color: #111827;
+  color: #374151;
 }
 
 /* ------------------------------
@@ -268,7 +268,7 @@
 }
 
 .placeholder-card h1 {
-  color: #111827;
+  color: #374151;
 
   margin: 1.5rem 0 1rem;
 }
