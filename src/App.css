@@ -698,3 +698,241 @@
   }
 
 }
+/* ------------------------------
+   TMDB Movies Search Page
+------------------------------ */
+
+.movies-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.movies-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.movies-hero h1 {
+  color: #374151;
+  font-size: 2.5rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.movies-hero > p:last-child {
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.movie-search-form {
+  display: flex;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.movie-search-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.movie-search-form input:focus {
+  border-color: #e50914;
+}
+
+.movie-search-form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.4rem;
+  border: none;
+  border-radius: 8px;
+  background: #e50914;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.movie-search-form button:hover {
+  background: #b20710;
+}
+
+.movie-search-form button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.tmdb-attribution {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin: 1rem 0 2rem;
+}
+
+.movie-message {
+  text-align: center;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 2rem auto;
+}
+
+.movie-search-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 3rem 1rem;
+  background: white;
+  border-radius: 14px;
+  color: #6b7280;
+  text-align: center;
+}
+
+.movie-search-empty .material-symbols-outlined {
+  font-size: 3rem;
+  color: #e50914;
+}
+
+.movie-results {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.movie-result-card {
+  display: flex;
+  overflow: hidden;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+  min-width: 0;
+}
+
+.movie-poster {
+  display: block;
+  width: 145px;
+  min-width: 145px;
+  object-fit: cover;
+  align-self: flex-start;
+  background: #e5e7eb;
+}
+
+.poster-placeholder {
+  min-height: 215px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  color: #6b7280;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.poster-placeholder .material-symbols-outlined {
+  font-size: 2rem;
+}
+
+.movie-result-content {
+  min-width: 0;
+  padding: 1.1rem;
+}
+
+.movie-result-content h2 {
+  color: #374151;
+  font-size: 1.15rem;
+  margin: 0 0 0.65rem;
+}
+
+.movie-meta {
+  color: #6b7280;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.movie-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #b45309;
+  font-weight: 600;
+}
+
+.movie-rating .material-symbols-outlined {
+  font-size: 1.2rem;
+}
+
+.movie-overview {
+  color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.tmdb-footer {
+  margin-top: 2.5rem;
+  color: #6b7280;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ------------------------------
+   Movie Search Responsive Layout
+------------------------------ */
+
+@media (max-width: 850px) {
+  .movie-results {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .movies-page {
+    padding: 2.5rem 1rem;
+  }
+
+  .movies-hero h1 {
+    font-size: 2rem;
+  }
+
+  .movie-search-form {
+    flex-direction: column;
+  }
+
+  .movie-search-form button {
+    width: 100%;
+  }
+
+  .movie-result-card {
+    flex-direction: column;
+  }
+
+  .movie-poster {
+    width: 100%;
+    min-width: 0;
+    max-height: 350px;
+    object-fit: contain;
+  }
+
+  .poster-placeholder {
+    min-height: 150px;
+  }
+}
