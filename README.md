@@ -1,16 +1,16 @@
-# React + Vite
+# StreamList
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+StreamList is a React + Vite application for the EZTechMovie course project. The current version includes the watchlist/movie pages, Google sign-in UI, protected routes, a demonstration cart, and a credit-card form for mock test data.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. Copy `.env.example` to `.env`.
+2. Add a Google OAuth **Web application** client ID as `VITE_GOOGLE_CLIENT_ID` and authorize the Vite origin (usually `http://localhost:5173`) in Google Cloud Console.
+3. Optionally add `VITE_TMDB_API_KEY` for the existing movie search.
+4. Run `npm install`, then `npm run dev`.
 
-## React Compiler
+See [docs/FINAL_PROJECT_DESIGN.md](docs/FINAL_PROJECT_DESIGN.md) for the assignment requirements mapping, Google Cloud setup, security discussion, test plan, presentation outline, and references.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Security notice
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+This is a course prototype, not a production authentication or payment system. The Google profile is held in memory; the browser-side JWT payload decoding is not server-side signature verification. Production apps must verify Google ID tokens on a trusted backend. The checkout stores only fictional test card data in localStorage to demonstrate the assignment requirement; never enter real payment-card data. CVV is not stored. Real payments should use a payment provider's hosted checkout/fields and tokenization.
